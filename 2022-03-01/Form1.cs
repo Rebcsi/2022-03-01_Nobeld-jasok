@@ -21,5 +21,10 @@ namespace _2022_03_01
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
