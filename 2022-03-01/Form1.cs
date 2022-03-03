@@ -45,10 +45,24 @@ namespace _2022_03_01
             }
 
             //10d
-            StreamWriter sw = new StreamWriter("uj_dijazott.txt");
-            sw.WriteLine("Év;Név;SzületésHalálozás;Országkód");
-            sw.WriteLine(textBox1.Text + ";" + textBox2.Text + ";" + textBox3.Text + ";" + textBox4.Text + ";");
-            sw.Close();
+            try
+            {
+                StreamWriter sw = new StreamWriter("uj_dijazott.txt");
+                sw.WriteLine("Év;Név;SzületésHalálozás;Országkód");
+                sw.WriteLine(textBox1.Text + ";" + textBox2.Text + ";" + textBox3.Text + ";" + textBox4.Text + ";");
+                sw.Close();
+                MessageBox.Show("Sikeres mentés");
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
     }
