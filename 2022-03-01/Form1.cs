@@ -29,9 +29,17 @@ namespace _2022_03_01
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //10.b
             if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
             {
                 MessageBox.Show("Töltsön ki minden mezőt!");
+                return;
+            }
+            //10.c 1989<  
+          //  int.TryParse("", out int result);
+            if (!int.TryParse(textBox1.Text, out int Év) || Év < 1989 )
+            {
+                MessageBox.Show("Hiba! Az évszám nem megfelelő!");
                 return;
             }
 
