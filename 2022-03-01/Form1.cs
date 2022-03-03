@@ -58,9 +58,9 @@ namespace _2022_03_01
                 textBox4.Text = "";
 
             }
-            catch (Exception)
+            catch (Exception error)
             {
-
+                MessageBox.Show("Hiba az állomány kiírásánál!\n{error.Message}");
                 throw;
             }
 
